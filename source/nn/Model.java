@@ -19,9 +19,10 @@ public class Model {
     this.n = n;
     this.W = new double[n*nWeights];
 
+    double scale = Math.sqrt(1./ nWeights);
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < nWeights; j++) {
-        W[i*nWeights + j]= Math.random();
+        W[i*nWeights + j]= (Math.random()-.5)*scale;
       }
     }
   }
